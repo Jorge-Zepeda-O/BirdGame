@@ -2,7 +2,7 @@
 
 // --- CLOCK CYCLES --- //
 var Clock = 0; 			// Current tick value 		//
-const ClockTick = (60/12)*(1000/24);	// ms per tick (1/24 day) 	//
+const ClockTick = (60/24)*(1000/24);	// ms per tick (1/24 day) 	//
 const ClockColors = [	// Colors for background	//
 	'#121829', '#1E2743', '#2B375E', '#3B4C82', '#4B62A6', '#5879B6',
 	'#6590C7', '#A6AAD4', '#E7C5BE', '#F2D4B9', '#FDE3B4', '#FEEDC3',

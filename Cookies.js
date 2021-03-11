@@ -77,26 +77,26 @@ function LoadData()
 		let r = 180 * ((2 * Math.random() - 1) * Math.abs(2 * Math.random() - 1) ** 7);
 
 		// Peep selection //
-		let pt = 'icon_';
+		let pt = 'icon_Peep_';
 		let pc = 0;
 		for(let p = 0; p < PeepTypes.length; p++)
 		{
 			pc += PeepChance[p];
 			if(birdtype < pc)
 			{
-				pt += PeepTypes[p] + "_S"; // Side by default //
+				pt += PeepTypes[p];
 				break;
 			}
 		}
 
 		// Void birb? //
-		if(isvoid) pt = 'icon_Void_S';
+		if(isvoid) pt = 'icon_Peep_Void';
 		let tag = isvoid ? 'void' : '';
 
 		// Draw peep //
 		document.getElementById('$village').innerHTML += `
 			<img id="$peepimg` + p + `" width="` + z + `" style="position:absolute; left:` + x + `%; top:` + y 
-			+ `%; transform: rotate(` + r + `deg) scaleX(1); ` + (isvoid ? `z-index:10000;` : ``) + `" src="Assets/Peeps/` + pt + `.png" title="` + tag + `" />`;
+			+ `%; transform: rotate(` + r + `deg) scaleX(1); ` + (isvoid ? `z-index:10000;` : ``) + `" src="Assets/` + pt + `.png" title="` + tag + `" />`;
 	}
 }
 function ClearData()

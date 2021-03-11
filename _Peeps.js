@@ -113,26 +113,26 @@ function MakePeep()
 		let r = 180 * ((2 * Math.random() - 1) * Math.abs(2 * Math.random() - 1) ** 7);
 
 		// Peep selection //
-		let pt = 'icon_';
+		let pt = 'icon_Peep_';
 		let pc = 0;
 		for(let p = 0; p < PeepTypes.length; p++)
 		{
 			pc += PeepChance[p];
 			if(birdtype < pc)
 			{
-				pt += PeepTypes[p] + "_S";	// Side by default //
+				pt += PeepTypes[p];
 				break;
 			}
 		}
 
 		// Void birb? //
-		if(isvoid) pt = 'icon_Void_S';
+		if(isvoid) pt = 'icon_Peep_Void';
 		let tag = isvoid ? 'void' : '';
 
 		// Draw peep //
 		document.getElementById('$village').innerHTML += `
 			<img id="$peepimg`+ ((Peeps[2]-1)/5) + `" width="` + z + `" style="position:absolute; left:` + x + `%; top:` + y 
-			+ `%; transform: rotate(` + r + `deg) scaleX(1)" src="Assets/Peeps/` + pt + `.png" title="` + tag + `" />`;
+			+ `%; transform: rotate(` + r + `deg) scaleX(1)" src="Assets/` + pt + `.png" title="` + tag + `" />`;
 	}
 	
 	// Update Labels //
@@ -157,7 +157,6 @@ function MovePeeps()
 		if(peepimg == undefined) continue;
 
 		let tag = peepimg.title;
-		let src = peepimg.src;
 
 		let x = parseFloat(peepimg.style.left.split('%')[0]);
 		let y = parseFloat(peepimg.style.top.split('%')[0]);
@@ -194,22 +193,11 @@ function MovePeeps()
 		// Assign other things //
 		let z = 48 + (y - 50) / 50 * 24;
 
-		// Determine which direction this peepo is facing //
-		let facing_src = src.split('/');
-		facing_src = facing_src[facing_src.length - 1];
-		if(dy < -0.05)
-			facing_src = facing_src.substr(0, facing_src.length - 5) + 'B.png';
-		else if(dy > 0.05)
-			facing_src = facing_src.substr(0, facing_src.length - 5) + 'F.png';
-		else
-			facing_src = facing_src.substr(0, facing_src.length - 5) + 'S.png';
-
 		// And put the new values in //
 		peepimg.style.left = x + '%';
 		peepimg.style.top = y + '%';
 		peepimg.width = z;
 		peepimg.style.transform = 'rotate(' + r_ + 'deg) scaleX(' + s + ')';
-		peepimg.src = src.substr(0, src.length - facing_src.length) + facing_src;
 	}
 }
 
