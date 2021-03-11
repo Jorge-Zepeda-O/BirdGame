@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<script src="bootstrap/jquery.min.js"></script>
+	<script src="bootstrap/popper.min.js"></script>
+	<script src="bootstrap/bootstrap.min.js"></script>
+
+	<!-- Custom code -->
+	<script src="_Global.js"></script>
+	<script src="_Peeps.js"></script>
+	<script src="_Resources.js"></script>
+	<script src="Update.js"></script>
+	<script src="Cookies.js"></script>
+	<script src="htmlBuilder.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container-fluid row" style="max-width: 730px;">
+	<div class="col-1" style="height:32px;">
+		<button type="button" style="height:32px;" onclick="ChangeSettings()">
+			<img width="24" src="Assets/icon_gear.png"/>
+		</button>
+	</div>
+</div>
+<div class="container-fluid row" style="max-width:730px;">
+	<div class="col-12" style="height:32px;" id="$Status"></div>
+</div>
+<div class="container-fluid row" style="height:360px; max-width:760px; margin-left:-30px">
+	<div class="col-12 imageWrapper" id="$village">
+		<img class="overlayImage" src="Assets/village_Base.png" />
+
+		<img id="$vilPeeps1" class="overlayImage invisible" src="Assets/village_Peeps1.png" />
+		<img id="$vilPeeps2" class="overlayImage invisible" src="Assets/village_Peeps2.png" />
+		<img id="$vilPeeps3" class="overlayImage invisible" src="Assets/village_Peeps3.png" />
+
+		<img id="$vilSeeds1" class="overlayImage invisible" src="Assets/village_Seeds1.png" />
+		<img id="$vilSeeds2" class="overlayImage invisible" src="Assets/village_Seeds2.png" />
+		<img id="$vilSeeds3" class="overlayImage invisible" src="Assets/village_Seeds3.png" />
+
+		<img id="$vilSilo" class="overlayImage invisible" src="Assets/village_Silo1.png" />
+		<img id="$vilShack" class="overlayImage invisible" src="Assets/village_Woodshack1.png" />
+
+		<img id="$vilDock" class="overlayImage invisible" src="Assets/village_Dock1.png" />
+		<img id="$vilLibrary" class="overlayImage invisible" src="Assets/village_Library2.png" />
+	</div>
+</div>
+<div class="container-fluid row" style="max-width:730px;">
+	<div class="col-12">
+		<ul id="$ResMenu" class="ResMenu">
+		</ul>
+	</div>
+</div>
+
+<script>
+	// Add in the listener if the visibility changes //
+	document.addEventListener('visibilitychange', CatchUp);
+
+	// Load in save data //
+	LoadData();
+
+	// Populate the display //
+	BuildResourceHTML();
+	CheckUnlocks();
+
+	UpdateInfo();
+
+	// Start updates //
+	setInterval(Tick, ClockTick);
+	setInterval(SaveData, 6*(24*ClockTick));
+	//setTimeout(ClearData, 5000);
+</script>
+</body>
+</html>

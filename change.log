@@ -1,0 +1,92 @@
+~~~~~~ Nov 30, 2020 v2 ~~~~~~
+= Made Peeps rounder
+= Minor changes to resource descriptions to incorporate more references
+
+x Visual bug causing everything to appear when it's not supposed to (Forgot to add in bootstrap)
+
+~~~~~~ Nov 30, 2020 ~~~~~~
+Feature additions:
++ New resources! (Some currently without assets)
++ More resource upgrades! (Needs some balancing and testing)
++ Increased Peep caps!
++ New ways to get resources! (I'm looking at you, Knowledge)
++ Introduced carry mechanic, which fundamentally multiplies production across a resource type
++ Little information tidbits for each resource
++ Introduced assignment multipliers (1x, 5x, 20x)
++ Peeps have a mind of their own
++ Resource conversions now exist and happen on their own if there are idle Peeps
++ Town buildings
++ New Peeps (Currently they all behave the same)
++ Rare easter egg
+
+Balance or gameplay updates:
+= When out of focus, the game compensates for the down time
+= Fundamentally altered resource production mechanics
+= Rebalanced resource production, upgrades, and capacities (and their costs)
+= Resource capacity is now based on total units rather than total value
+= Consuming resources uses least valuable first, but will also consume whole units of more valuable resources.
+= Restructured a lot of code
+= Lots of UI changes
+= Added a verbosity toggle for more information
+= Knowledge has temporary and permanent forms now. Permanent resources are obviously slow to acquire.
+
+Bugfixes:
+x Housing/Capacity upgrades not being green when available for purchase
+x When loading, if you have a resource at the maximum capacity, the game does not attribute that resource to you.
+x Books were not working before... they work now.
+x Fixed Peeps moonwalking (but they still walk in the sky)
+
+~~~~~~ Sep 2, 2020 v2 ~~~~~~
+= Peeps no longer spawn outside of the village
+= Disable new peeps once peep capacity is reached
+= Slowed from 14 days / minute to 10 days / minute
+= Increased hatch rate
+
+~~~~~~ Sep 2, 2020 ~~~~~~
++ Restructured resource management and allocation
++ Added more resources
++ More upgrades, including capacity upgrades
++ UI overhaul
++ Unlock system started, not finished
++ Lots of cute birbs
+
+= Production changes
+= Upgrade cost changes
+= Knowledge cap nerfed, but supplemented with peeps having their own knowledge
+
+! Peep hunger is currently broken
+
+~~~~~~ Aug 1, 2020 v2 ~~~~~~
++ Wood upgrades now have names
++ Resource icons!
+
+= Text and images now bigger and brighter
+= Production slowed down (in some cases, significantly)
+= Upgrade strength reduced
+= Peep upkeep now linear with total peeps (chicks eat 50% more)
+
+- Fixed crashing bug when finishing upgrade tree
+
+~~~~~~ Aug 1, 2020 ~~~~~~
++ Upgrades! (finally)
++ Save and load progress! (Also finally)
++ Click to work unworking peeps (consumes lots of seeds!)
++ Press the birb to clear your save (BE CAREFUL!)
+
+= Production balance changes
+= Peep upkeep now kinder
+
+- Chicks counting double to the peep cap
+
+~~~~~~ Jul 26, 2020 ~~~~~~
++ Assets are now in (courtesy of Gil <3)
++ Capacities for resources and peeps exist
++ Chicks are hatched and grown instead of straight to peeps
++ Things now run on a day-cycle (24 ticks)
+
+= Pretty things
+= Hunger mechanics are updated
+= Peep creation now harder
+
+~~~~~~ Jul 21, 2020 ~~~~~~
++ First build!

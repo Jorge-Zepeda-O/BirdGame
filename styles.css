@@ -1,0 +1,161 @@
+/* All Elements */
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: "Bookman Old Style";
+}
+button{
+	border-radius: 8px;
+}
+
+/* Tooltips */
+.tip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 0px;
+	margin: 0px 0px -6px 0px;
+}
+.tip .tiptxt{
+	visibility: hidden;
+	width: 120px;
+	background-color: rgba(0,0,0,0.6);
+	color: white;
+	text-align: center;
+	border-radius: 6px;
+
+	position: absolute;
+	z-index: 1;
+	left: -20px;
+	top: 29px;
+}
+.tip:hover .tiptxt{
+	visibility: visible;
+}
+.tiptxt label{
+	font-size: 16px;
+	text-align: center;
+}
+
+/* Image Overlays */
+.imageWrapper {
+	position: relative;
+}
+.overlayImage {
+	position: absolute;
+}
+
+/* Menu Elements */
+.ResMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.ResMenu li {
+    padding: 4px;
+    margin-bottom: 4px;
+    background-color: lightgray;
+    border-color: black;
+    border-radius: 8px 8px 32px 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+	
+	vertical-align: middle;
+}
+.ResHeader
+{
+	display: grid;
+	grid-template-columns: 176px 40px 40px 40px auto 200px 120px;
+	grid-template-rows: 30px 30px;
+	grid-gap: 4px 4px;
+	font-size: 20px;
+}
+/*
+.ResMenu div {
+	display: grid;
+	grid-template-columns: 176px 40px 40px 40px auto 200px 120px;
+	grid-template-rows: 30px 30px;
+	grid-gap: 4px 4px;
+	font-size: 20px;
+}
+*/
+.ResMenu button{
+	margin-top: -4px;
+	vertical-align: middle;
+}
+
+.ResItem {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.ResItem li {
+	padding: 4px;
+	margin-left: 8px;
+	margin-bottom: 4px;
+	margin-right: 4px;
+	background-color: white;
+	border-color: black;
+	border-radius: 8px 8px 32px 8px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+	vertical-align: middle;
+
+	display: grid;
+	grid-template-columns: 64px 280px auto 120px;
+	grid-template-rows: 30px 30px;
+	grid-gap: 4px 4px;
+}
+.ResItem img {
+    border-radius: 8px;
+    vertical-align: middle;
+}
+.ResItem label {
+	font-size: 20px;
+}
+
+/* Resource bar colors */
+.Res1 {
+	background-color: deepskyblue;
+}
+.Res2 {
+	background-color: lawngreen;
+}
+.Res3 {
+	background-color: orange;
+}
+.Res4 {
+	background-color: palevioletred;
+}
+.Res5 {
+	background-color: violet;
+}
+
+/* Buttons */
+.ButtonAssign {
+    background-color: darkgreen;
+	border-color: green;
+	line-height: 20px;
+}
+.ButtonDisabled {
+	background-color: lightgray;
+	border-color: gray;
+	color: black;
+	line-height: 20px;
+}
+.ButtonRemove {
+    background-color: darkred;
+	border-color: red;
+	line-height: 20px;
+}
+
+.BtnUpgAvailable {
+	grid-column: -1;
+	background-color: darkgreen;
+	border-color: green;
+	color: lime;
+}
+.BtnUpgUnavailable {
+	grid-column: -1;
+	background-color: lightgray;
+	border-color: gray;
+	color: gray;
+}
